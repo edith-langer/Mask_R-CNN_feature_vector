@@ -1,0 +1,4 @@
+40: bottle
+74: book
+26: umbrella
+40: bottle

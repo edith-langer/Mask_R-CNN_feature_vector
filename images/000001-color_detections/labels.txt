@@ -1,0 +1,7 @@
+67: keyboard
+74: book
+44: knife
+42: cup
+63: tv
+61: dining table
+76: vase
