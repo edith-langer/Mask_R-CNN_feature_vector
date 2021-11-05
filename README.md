@@ -10,6 +10,11 @@ https://github.com/deontaljaard/mrcnn-docker (without COCO files)
 Next steps:
 - [ ] save visualization
 
+
+docker build -t maskrcnn_feature_gpu .
+nvidia-docker run -it --network=host -v /home/edith/Projects/maskrcnn_feature_vector_extraction/:/home/workspace/maskrcnn_feature -v /home/edith/liebnas_mnt/PlaneReconstructions/:/home/workspace/data --gpus 'all,"capabilities=compute,utility"' --rm  --name maskrcnn_feature_gpu maskrcnn_feature_gpu bash
+python3 setup.py install
+
 # Below you can find the README.md from the original repository. (https://github.com/matterport/Mask_RCNN)
 
 # Mask R-CNN for Object Detection and Segmentation

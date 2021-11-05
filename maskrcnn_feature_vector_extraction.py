@@ -50,7 +50,7 @@ if not os.path.exists(COCO_MODEL_PATH):
 
 # Directory of images to run detection on
 #IMAGE_DIR = os.path.join(ROOT_DIR, "images")
-dataset_path = os.path.abspath("/home/root/data/Arena/")
+dataset_path = os.path.abspath("/home/workspace/data/GH30_office/")
 
 scene_paths = [f.path for f in os.scandir(dataset_path) if f.is_dir()]
 scene_paths = [s + '/rgb/' for s in scene_paths]
