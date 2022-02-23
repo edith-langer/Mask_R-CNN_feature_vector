@@ -9,8 +9,7 @@ It inferes the detection results for all available png images and stores the fol
 * feature-file: one for each detected object exists (association via object ID). It contains the extracted feature vector from the second last layer of Mask R-CNN.
 
 We created results using weights trained on COCO and YCBV (weights copied from Kiru Park, who trained them for the BOP challenge 2020 https://github.com/kirumang/Pix2Pose).
-
-
+The models trained on COCO and YCBV can be found here: https://drive.google.com/drive/folders/1xuaapmgFZ7xaCqesYaOL1l0-9hv4NXCF?usp=sharing
 
 Tested in docker environment using GPU:
 ```
@@ -37,7 +36,7 @@ This code was used to generate detection results for the baseline used in
 }
 ```
 
-Note: the numbers of the extracted feature vector may vary slightly depending on the used GPU
+Note: the values of the extracted feature vector may vary slightly depending on the used GPU
 
 
 
