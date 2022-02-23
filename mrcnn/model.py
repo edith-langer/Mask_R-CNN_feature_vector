@@ -930,6 +930,11 @@ def fpn_classifier_graph(rois, feature_maps, image_meta,
                            name="mrcnn_class_conv1")(x)
     x = KL.TimeDistributed(BatchNorm(), name='mrcnn_class_bn1')(x, training=train_bn)
     x = KL.Activation('relu')(x)
+
+    fc1 = KL.Lambda(lambda x: K.squeeze(K.squeeze(x, 3), 2),
+                       name="pool_squeeze_fc1")(x)
+
+
     x = KL.TimeDistributed(KL.Conv2D(fc_layers_size, (1, 1)),
                            name="mrcnn_class_conv2")(x)
     x = KL.TimeDistributed(BatchNorm(), name='mrcnn_class_bn2')(x, training=train_bn)
@@ -952,7 +957,7 @@ def fpn_classifier_graph(rois, feature_maps, image_meta,
     s = K.int_shape(x)
     mrcnn_bbox = KL.Reshape((s[1], num_classes, 4), name="mrcnn_bbox")(x)
 
-    return mrcnn_class_logits, mrcnn_probs, mrcnn_bbox, shared
+    return mrcnn_class_logits, mrcnn_probs, mrcnn_bbox, fc1
 
 
 def build_fpn_mask_graph(rois, feature_maps, image_meta,
