@@ -147,10 +147,10 @@ for dataset_path in rooms:
                         bounding_boxes = []
 
                         for i in r['rois']:
-                            bounding_boxes.append({'minX': int(i[0]),
-                                                   'minY': int(i[1]),
-                                                   'maxX': int(i[2]),
-                                                   'maxY': int(i[3])})
+                            bounding_boxes.append({'minX': int(i[1]),
+                                                   'minY': int(i[0]),
+                                                   'maxX': int(i[3]),
+                                                   'maxY': int(i[2])})
 
                         labels = []
 
