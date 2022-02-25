@@ -26,7 +26,7 @@ python3 maskrcnn_feature_vector_extraction_ycbv.py
 This code was used to generate detection results for the baseline used in 
 
 ```
-@article{patten2020dgcm,
+@article{langer2022where,
   title={Where Does It Belong? Autonomous Object Mapping in Open-World Settings},
   author={Langer, Edith and Patten, Timothy and Vincze, Markus},
   journal={Frontiers in Robotics and AI},
